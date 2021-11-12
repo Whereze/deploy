@@ -17,10 +17,12 @@ services:
 
 
   tgbot:
-    image: annadvoskina/tgbot:1.0.1
+    image: annadvoskina/tgbot:1.0.2
     networks:
       - whereze
     env_file: .env
+    volumes: 
+      - ./models/fasttext:/app/service/fasttext
 
 networks:
   whereze:
